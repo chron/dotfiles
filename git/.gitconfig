@@ -1,0 +1,46 @@
+[color]
+  ui = true
+[user]
+  name = Paul Prestidge
+  email = paul@hashbang.co.nz 
+[core]
+	editor = vim
+	excludesfile = /Users/paulprestidge/.gitignore
+	autocrlf = false
+[diff]
+  tool = sublimerge
+	compactionHeuristic = true
+[difftool "sublimerge"]
+  cmd = sublime -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[alias]
+  compare = log --left-right --graph --cherry-pick --oneline
+[init]
+	templatedir = ~/.git_template
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[commit]
+  template = ~/.gitmessage
+	gpgsign = true
+
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[help]
+	autocorrect = 20
+[credential]
+	helper = osxkeychain
+[interactive]
+	diffFilter = diff-highlight
+[rebase]
+	autoStash = true
