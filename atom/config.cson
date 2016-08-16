@@ -1,0 +1,43 @@
+"*":
+  "atom-beautify": {}
+  "bracket-matcher":
+    autocompleteBrackets: false
+    autocompleteSmartQuotes: false
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "autocomplete-atom-api"
+      "autocomplete-snippets"
+      "autocomplete-plus"
+      "autocomplete-html"
+      "autocomplete-css"
+      "activate-power-mode"
+      "background-tips"
+      "welcome"
+      "floobits"
+      "merge-conflicts"
+      "minimap"
+    ]
+    projectHome: "~/workspace"
+    themes: [
+      "atom-dark-ui"
+      "one-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Fantasque Sans Mono"
+    fontSize: 15
+    invisibles: {}
+    lineHeight: 1.3
+    showInvisibles: true
+  "exception-reporting":
+    userId: "e166e2e4-13fa-2fd8-a44f-411b88ce2e6d"
+  "git-projects":
+    rootPath: "~/workspace"
+  "one-dark-ui": {}
+  tabs:
+    enableVcsColoring: true
+    showIcons: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
