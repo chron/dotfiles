@@ -5,6 +5,7 @@
     autocompleteSmartQuotes: false
   core:
     audioBeep: false
+    closeDeletedFileTabs: true
     disabledPackages: [
       "autocomplete-atom-api"
       "autocomplete-snippets"
@@ -19,10 +20,12 @@
       "minimap"
     ]
     projectHome: "~/workspace"
+    telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
       "one-dark-syntax"
     ]
+    titleBar: "custom"
   editor:
     fontFamily: "Fantasque Sans Mono"
     fontSize: 16

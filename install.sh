@@ -3,7 +3,6 @@
 export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
-
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/system/.bashrc" ~
 ln -sfv "$DOTFILES_DIR/system/.bash_profile" ~
@@ -26,3 +25,13 @@ brew tap caskroom/versions
 
 brew install node git gnupg gpg-agent imagemagick rbenv hub vim postgresql mysql redis phantomjs cowsay lastpass-cli ffmpeg
 brew cask install atom google-chrome spotify firefox vlc flux slack sourcetree
+
+rbenv install 2.4.1
+rbenv global 2.4.1
+
+apm install indent-guide-improved file-icons atom-beautify highlight-selected
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+git clone https://github.com/morhetz/gruvbox.git ~/.vim/bundle/gruvbox
+
