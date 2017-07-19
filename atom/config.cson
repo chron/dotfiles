@@ -1,5 +1,7 @@
 "*":
-  "atom-beautify": {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "67e035fe-8d22-405f-a0c2-444e0bc4fc4a"
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
@@ -19,13 +21,13 @@
       "merge-conflicts"
       "minimap"
     ]
+    openEmptyEditorOnStart: false
     projectHome: "~/workspace"
     telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
       "one-dark-syntax"
     ]
-    titleBar: "custom"
   editor:
     fontFamily: "Fantasque Sans Mono"
     fontSize: 16
@@ -40,7 +42,8 @@
   tabs:
     enableVcsColoring: true
     showIcons: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
   welcome:
     showOnStartup: false

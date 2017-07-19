@@ -1,8 +1,9 @@
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
 source ~/.git-prompt.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 export PS1='🏃  \[\e[1;34m\]\W\[\e[m\]\[\e[1;31m\]$(__git_ps1)\[\e[m\]\[\e[0;32m\] \$\[\e[m\] '
-export PATH="~/workspace/hashops/bin:/usr/local/heroku/bin:$PATH"
+export PATH="~/Library/Python/2.7/bin:/usr/local/heroku/bin:$PATH"
 export GREP_OPTIONS="--color=auto"
 
 # export GPGKEY=50CC859B
@@ -28,19 +29,19 @@ alias specs="bundle exec rspec"
 alias pg-start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg-stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias f="RAILS_ENV=development foreman start -f Procfile.dev"
+alias auth-bpme-local='curl --silent -H "Content-Type: application/json" -X POST -d @/Users/paul/notes/auth-bpme.json http://localhost:17002/auth/token | jq -r ".access_token" | tr -d "\n" | pbcopy'
+alias auth-bpme-dev='curl --silent -H "Content-Type: application/json" -X POST -d @/Users/paul/notes/auth-bpme-dev.json https://dev.bpme.paperkite.io/auth/token | jq -r ".access_token" | tr -d "\n" | pbcopy'
 alias ssh-pubkey="pbcopy < ~/.ssh/id_rsa.pub && echo 'Copied SSH Public Key to clipboard.'"
-alias docker-vps="ssh deploy@docker.hashbang.co.nz"
-alias docker-deploy="echo | bundle exec cap staging docker:deploy"
+alias bastion="ssh bastion.bpme.paperkite.io"
 alias gk="lpass show 3687407676867194205 | tail -n1 | pbcopy"
 git-branch-search() {
   git branch | grep $1 | head -n1 | xargs git checkout
 }
 alias gbs=git-branch-search
-
-st () {
-  echo -ne "\033]0;$1\007"
+tp() {
+  terraform plan | grep -Ev '"([^"]*)" => "\1"' 
 }
-
+lc () { ruby ~/bin/colorls/colorls.rb $1; }
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
 export NVM_DIR="/Users/paul/.nvm"

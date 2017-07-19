@@ -24,7 +24,7 @@ brew install brew-cask
 brew tap caskroom/versions
 
 brew install node git gnupg gpg-agent imagemagick rbenv hub vim postgresql mysql redis phantomjs cowsay lastpass-cli ffmpeg
-brew cask install atom google-chrome spotify firefox vlc flux slack sourcetree
+brew cask install atom google-chrome spotify firefox vlc flux slack sourcetree colordiff
 
 rbenv install 2.4.1
 rbenv global 2.4.1
