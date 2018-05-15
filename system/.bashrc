@@ -28,7 +28,7 @@ alias git-branches=" git for-each-ref --sort=committerdate refs/heads/ --format=
 alias specs="bundle exec rspec"
 alias pg-start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg-stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-alias f="RAILS_ENV=development foreman start -f Procfile.dev"
+alias f="RAILS_ENV=development hivemind Procfile.dev"
 alias auth-bpme-local='curl --silent -H "Content-Type: application/json" -X POST -d @/Users/paul/notes/auth-bpme.json http://localhost:17002/auth/token | jq -r ".access_token" | tr -d "\n" | pbcopy'
 alias auth-bpme-dev='curl --silent -H "Content-Type: application/json" -X POST -d @/Users/paul/notes/auth-bpme-dev.json https://dev.bpme.paperkite.io/auth/token | jq -r ".access_token" | tr -d "\n" | pbcopy'
 alias ssh-pubkey="pbcopy < ~/.ssh/id_rsa.pub && echo 'Copied SSH Public Key to clipboard.'"
@@ -47,3 +47,4 @@ test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_i
 export NVM_DIR="/Users/paul/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 source $(brew --prefix nvm)/nvm.sh
+export BUNDLE_GITHUB__COM=b27eaf6d415db34b56195f87b92635c9bdf859ab:x-oauth-basic
