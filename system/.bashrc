@@ -47,4 +47,3 @@ test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_i
 export NVM_DIR="/Users/paul/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 source $(brew --prefix nvm)/nvm.sh
-export BUNDLE_GITHUB__COM=b27eaf6d415db34b56195f87b92635c9bdf859ab:x-oauth-basic
