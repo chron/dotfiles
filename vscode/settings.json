@@ -1,0 +1,19 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.startupEditor": "newUntitledFile",
+  "guides.enabled": false,
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.wordBasedSuggestions": false,
+  "workbench.activityBar.visible": false,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true
+}

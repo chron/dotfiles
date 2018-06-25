@@ -14,6 +14,8 @@ ln -sfv "$DOTFILES_DIR/atom/keymap.cson" ~/.atom
 ln -sfv "$DOTFILES_DIR/atom/init.coffee" ~/.atom
 ln -sfv "$DOTFILES_DIR/atom/styles.less" ~/.atom
 
+# TODO: VS Code symbolic links
+
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/versions
 brew tap homebrew/dupes
