@@ -15,5 +15,7 @@
   "editor.wordBasedSuggestions": false,
   "workbench.activityBar.visible": false,
   "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "editor.autoClosingBrackets": false,
+  "zenMode.centerLayout": false,
 }
