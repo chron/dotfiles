@@ -2,6 +2,7 @@
 alias sort-version="sort -t. -k 1,1n -k 2,2n -k 3,3n -k 4,4n"
 alias ssh-pubkey="pbcopy < ~/.ssh/id_rsa.pub && echo 'Copied SSH Public Key to clipboard.'"
 alias crontab="VIM_CRONTAB=true crontab"
+alias reload="source ~/.bashrc"
 
 # Ruby / Rails
 alias be="bundle exec "

@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require 'io/console'
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+
+  gem 'colorize'
+end
+
+number_of_branches = $*[0] || 5
+last_n_branches = `git for-each-ref --sort='-authordate:iso8601' --format='%(authordate:relative),%(refname:short)' refs/heads | head -n#{number_of_branches}`
+list = last_n_branches.split(/\n/).map { |line| line.split(/,/) }
+
+list.each_with_index do |(time,ref), position|
+  print " [#{position+ 1}]".colorize(:green)
+  puts ' => %-50s %s' % [ref, time]
+end
+
+selected_position = STDIN.getch.to_i
+
+if selected_position > 0
+  selected_ref = list[selected_position - 1]&.last
+  `git checkout #{selected_ref}` if selected_ref
+end
