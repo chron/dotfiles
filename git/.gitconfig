@@ -1,8 +1,10 @@
 [color]
   ui = true
+  status = auto
 [user]
   name = Paul Prestidge
-  email = paul@paperkite.co.nz
+  email = paul.prestidge@optimalworkshop.com 
+	signingkey = 9ED772A33E25ABD2
 [core]
 	editor = vim
 	excludesfile = /Users/paul/.gitignore_global
@@ -27,11 +29,9 @@
 	diffFilter = diff-highlight
 [rebase]
 	autoStash = true
-[commit]
-	gpgsign = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

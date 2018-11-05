@@ -38,7 +38,7 @@ set title
 set number
 
 if exists("+colorcolumn")
-  set colorcolumn=81
+  set colorcolumn=101
 endif
 
 set cursorline
@@ -56,11 +56,11 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
-let g:netrw_winsize = 25
+let g:netrw_winsize = 20
 
 augroup ProjectDrawer
   autocmd!
-  autocmd VimEnter * :Vexplore
+  autocmd VimEnter * :Lexplore
   au VimEnter * wincmd l
 augroup END
 
@@ -68,3 +68,5 @@ aug netrw_close
   au!
   au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw"|q|endif
 aug END
+
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!

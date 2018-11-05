@@ -17,16 +17,14 @@ ln -sfv "$DOTFILES_DIR/atom/styles.less" ~/.atom
 # TODO: VS Code symbolic links
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap homebrew/versions
-brew tap homebrew/dupes
 brew tap caskroom/cask
 brew upgrade
 
 brew install brew-cask
 brew tap caskroom/versions
 
-brew install node git gnupg gpg-agent imagemagick rbenv hub vim postgresql mysql redis phantomjs cowsay lastpass-cli ffmpeg
-brew cask install atom google-chrome spotify firefox vlc flux slack sourcetree colordiff
+brew install nvm git gnupg gpg-agent imagemagick rbenv hub vim postgresql mysql redis phantomjs cowsay lastpass-cli ffmpeg
+brew cask install visual-studio-code amethyst iterm2 google-chrome spotify firefox vlc flux slack sourcetree colordiff
 
 rbenv install 2.4.1
 rbenv global 2.4.1
@@ -37,3 +35,6 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 git clone https://github.com/morhetz/gruvbox.git ~/.vim/bundle/gruvbox
 
+# git-prompt
+#
+# https://damieng.com/blog/2015/04/24/make-home-end-keys-behave-like-windows-on-mac-os-x
