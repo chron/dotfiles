@@ -6,10 +6,10 @@ alias reload="source ~/.bashrc"
 
 # Ruby / Rails
 alias be="bundle exec "
-alias specs="bundle exec rspec"
-alias f="RAILS_ENV=development hivemind Procfile.dev"
+alias rails-test-diff="git diff --name-only master... | grep test | xargs rails test"
+alias f="RAILS_ENV=development foreman start -f Procfile.dev"
 alias rails-worker="QUEUE=* bundle exec rake environment resque:work TERM_CHILD=1"
-alias rails-server="be puma -p 3000"
+alias rails-server="be rails s"
 
 # Terraform
 tp() {
