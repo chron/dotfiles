@@ -30,5 +30,6 @@
   "breadcrumbs.enabled": true,
   "sync.gist": "80994d4f6d108ab9bc89cb853746b759",
   "logMessagePrefix": "👨🏻‍💻",
-  "editor.colorDecorators": false
+  "editor.colorDecorators": false,
+  "javascript.suggest.enabled": false
 }

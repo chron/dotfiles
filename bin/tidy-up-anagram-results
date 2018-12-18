@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+anagrams = $<.readlines
+
+cleaned = anagrams.map { |phrase| phrase.split.sort * ' ' }.uniq
+
+puts cleaned

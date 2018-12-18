@@ -26,4 +26,20 @@
     "key": "alt+cmd+c",
     "command": "copyFilePath"
   },
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+r",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+r",
+    "command": "code-runner.run"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-code-runner.run"
+  },
 ]
