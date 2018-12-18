@@ -7,7 +7,9 @@ gemfile do
   gem 'octokit'
 end
 
-token = 'b94215dc8f01c671c6f1a584caf2db5259ce6a53' # ENV['GITHUB_ACCESS_TOKEN']
+token = ENV['GITHUB_ACCESS_TOKEN']
+
+raise 'set GITHUB_ACCESS_TOKEN' unless GITHUB_ACCESS_TOKEN
 
 api = Octokit::Client.new(access_token: token)
 api.auto_paginate = true
