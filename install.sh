@@ -25,7 +25,7 @@ brew upgrade
 brew install brew-cask
 brew tap caskroom/versions
 
-brew install nvm git gnupg gpg-agent imagemagick rbenv hub vim postgresql mysql redis phantomjs cowsay lastpass-cli ffmpeg
+brew install nvm git gnupg gpg-agent imagemagick rbenv hub vim postgresql mysql redis phantomjs cowsay lastpass-cli ffmpeg overmind
 brew cask install visual-studio-code amethyst iterm2 google-chrome spotify firefox vlc flux slack sourcetree colordiff
 
 rbenv install 2.4.1

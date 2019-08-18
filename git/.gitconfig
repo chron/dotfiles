@@ -4,10 +4,10 @@
 [user]
   name = Paul Prestidge
   email = paul.prestidge@optimalworkshop.com 
-	signingkey = 9ED772A33E25ABD2
 [core]
 	editor = vim
 	excludesfile = /Users/paul/.gitignore_global
+  attributesfile = /Users/paul/.gitattributes
 	autocrlf = false
 [push]
 	default = simple
@@ -35,3 +35,13 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[merge "railsschema"]
+  name = newer Rails schema version
+  driver = "ruby -e '\n\
+    system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
+    b = File.read(%(%A))\n\
+    b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.version: ([0-9_]+). do\\n=+\\nActiveRecord::Schema\\.define.version: ([0-9_]+). do\\n>+ .*/) do\n\
+      %(ActiveRecord::Schema.define(version: #{[$1, $2].max}) do)\n\
+    end\n\
+    File.open(%(%A), %(w)) {|f| f.write(b)}\n\
+    exit 1 if b.include?(%(<)*%L)'"

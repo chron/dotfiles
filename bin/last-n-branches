@@ -9,7 +9,7 @@ gemfile do
   gem 'colorize'
 end
 
-number_of_branches = $*[0] || 5
+number_of_branches = $*[0] || 7
 last_n_branches = `git for-each-ref --sort='-authordate:iso8601' --format='%(authordate:relative),%(refname:short)' refs/heads | head -n#{number_of_branches}`
 list = last_n_branches.split(/\n/).map { |line| line.split(/,/) }
 

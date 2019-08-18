@@ -31,5 +31,18 @@
   "sync.gist": "80994d4f6d108ab9bc89cb853746b759",
   "logMessagePrefix": "👨🏻‍💻",
   "editor.colorDecorators": false,
-  "javascript.suggest.enabled": false
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.enableAppInsights": false,
+  "code-runner.ignoreSelection": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  "colorize.languages": ["css", "scss", "svg"],
+  "colorize.enable_search_variables": false,
+  "javascript.suggest.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vscode_custom_css.imports": [
+    "file:///Users/paul/synthwave84.css"
+  ],
+  "eslint.packageManager": "yarn",
 }

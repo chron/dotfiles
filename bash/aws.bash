@@ -2,3 +2,9 @@ alias ec2-instances="aws ec2 describe-instances --query 'Reservations[].Instance
 alias prod-instances="assume-role prod ReadOnly && ec2-instances | grep WebApp | grep -v ',$'"
 alias one-prod-instance="prod-instances | tail -n1 | sed -e 's/.*,/ssh ec2-user@/' | pbcopy"
 alias opr="one-prod-instance"
+
+show-stacks() {
+  aws cloudformation describe-stacks --query 'Stacks[?Parameters[?ParameterKey==`Owner`] && Parameters[?ParameterKey==`DomainName`]][Parameters[?ParameterKey==`DomainName`].ParameterValue | [0], Parameters[?ParameterKey==`Owner`].ParameterValue | [0]].join(`,`, @)'
+}
+
+alias describe-stacks="show-stacks"

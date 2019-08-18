@@ -5,6 +5,14 @@ alias git-link="git symbolic-ref --short HEAD | xargs git push --set-upstream or
 alias git-branches="git for-each-ref --color --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' |tail -n 15"
 alias git-branch-files="git log master..head --name-only | grep '^[a-z]' | grep -v '^commit' | sort | uniq"
 
+commits-last-day() {
+  git log --oneline --all --since="24 hours ago" --author Paul | wc -l
+}
+
+git-branches-with-no-remote() {
+  git branch -vv | cut -c 3- | awk '$3 !~/\[/ { print $1 }'
+}
+
 git-branch-search() {
   git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | grep $1 | head -n1 | xargs git checkout
 }

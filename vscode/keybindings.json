@@ -23,7 +23,7 @@
     "command": "-workbench.files.action.showActiveFileInExplorer"
   },
   {
-    "key": "alt+cmd+c",
+    "key": "shift+alt+cmd+c",
     "command": "copyFilePath"
   },
   {
@@ -41,5 +41,24 @@
   {
     "key": "ctrl+alt+n",
     "command": "-code-runner.run"
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "copyRelativeFilePath"
+  },
+  {
+    "key": "shift+alt+cmd+c",
+    "command": "-copyRelativeFilePath",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "shift+alt+cmd+c",
+    "command": "copyFilePath",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "-copyFilePath",
+    "when": "!editorFocus"
   },
 ]
