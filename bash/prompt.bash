@@ -1,5 +1,4 @@
 source ~/.git-prompt.sh
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 __aws_ps1() {
   if [[ -z "${AWS_ACCOUNT_NAME}" ]]; then

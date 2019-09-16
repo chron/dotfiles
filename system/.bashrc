@@ -9,10 +9,11 @@ source ~/dotfiles/bash/env.bash
 source ~/dotfiles/bash/utils.bash
 source ~/dotfiles/bash/aws.bash
 source ~/dotfiles/bash/git.bash
-source ~/dotfiles/bash/ow.bash
 source ~/dotfiles/bash/prompt.bash
 source ~/dotfiles/bash/nonsense.bash
-source ~/dotfiles/bash/secrets.bash # TODO: Check if exists
+if [ -f ~/dotfiles/bash/secrets.bash ]; then source ~/dotfiles/bash/secrets.bash; fi
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
