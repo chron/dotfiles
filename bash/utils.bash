@@ -12,11 +12,6 @@ alias t="RAILS_ENV=test bundle exec rails test"
 alias rails-worker="QUEUE=* bundle exec rake environment resque:work TERM_CHILD=1"
 alias serve="ruby -run -e httpd . -p 8000"
 
-# Terraform
-tp() {
-  terraform plan | grep -Ev '"([^"]*)" => "\1"'
-}
-
 # Postgres
 alias pg-start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg-stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"

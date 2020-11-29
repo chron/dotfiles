@@ -1,3 +1,4 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
 eval "$(hub alias -s)"
@@ -7,7 +8,6 @@ source $(which assume-role)
 
 source ~/dotfiles/bash/env.bash
 source ~/dotfiles/bash/utils.bash
-source ~/dotfiles/bash/aws.bash
 source ~/dotfiles/bash/git.bash
 source ~/dotfiles/bash/prompt.bash
 source ~/dotfiles/bash/nonsense.bash

@@ -3,7 +3,7 @@
   status = auto
 [user]
 	name = Paul Prestidge
-	email = paul.prestidge@flickelectric.co.nz
+	email = paul@storypark.com
 [core]
 	editor = vim
 	excludesfile = /Users/paul/.gitignore_global
@@ -29,11 +29,5 @@
 	diffFilter = diff-highlight
 [rebase]
 	autoStash = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [commit]
 	template = /Users/paul/.stCommitMsg

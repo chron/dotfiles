@@ -28,3 +28,4 @@ git-pr() {
 alias gbs=git-branch-search
 alias gbf=git-branch-files
 alias lnb=last-n-branches
+alias s="git status"
