@@ -14,11 +14,11 @@ last_n_branches = `git for-each-ref --sort='-authordate:iso8601' --format='%(aut
 list = last_n_branches.split(/\n/).map { |line| line.split(/,/) }
 
 list.each_with_index do |(time,ref), position|
-  print " [#{position+ 1}]".colorize(:green)
+  print " [#{(position+1).to_s(36)}]".colorize(:green)
   puts ' => %-50s %s' % [ref, time]
 end
 
-selected_position = STDIN.getch.to_i
+selected_position = STDIN.getch.to_i(36)
 
 if selected_position > 0
   selected_ref = list[selected_position - 1]&.last
