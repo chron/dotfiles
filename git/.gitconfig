@@ -6,17 +6,13 @@
 	email = paul@storypark.com
 [core]
 	editor = vim
-	excludesfile = /Users/paul/.gitignore_global
+	excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes
 	autocrlf = false
 [push]
 	default = simple
 [alias]
   compare = log --left-right --graph --cherry-pick --oneline
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
 [branch]
 	autosetuprebase = always
 [pull]
@@ -29,5 +25,3 @@
 	diffFilter = diff-highlight
 [rebase]
 	autoStash = true
-[commit]
-	template = /Users/paul/.stCommitMsg

@@ -22,4 +22,11 @@ if [ -f ~/dotfiles/bash/secrets.bash ]; then source ~/dotfiles/bash/secrets.bash
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
 
+# storypark stuff ###
+eval "$(direnv hook bash)"
+export LOCAL_IP=$(ipconfig getifaddr en0)
+export HOSTNAME=$LOCAL_IP:3000
+# source /Users/paul/workspace/storyjar/ui_testing_scripts/alias.sh
+# end storypark stuff ###
+
 source $(brew --prefix nvm)/nvm.sh

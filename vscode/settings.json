@@ -23,7 +23,6 @@
   "editor.autoClosingBrackets": false,
   "zenMode.centerLayout": false,
   "ruby.intellisense": "rubyLocate",
-  "window.zoomLevel": 0,
   "explorer.autoReveal": false,
   "workbench.statusBar.feedback.visible": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -45,4 +44,9 @@
     "file:///Users/paul/synthwave84.css"
   ],
   "eslint.packageManager": "yarn",
+  "aws.profile": "profile:akin",
+  "aws.onDefaultRegionMissing": "add",
+  "files.exclude": {
+    "/tmp": true
+  },
 }

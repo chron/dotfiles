@@ -1,2 +1,3 @@
 .DS_Store
 /node_modules
+ui_testing_scripts/alias.sh

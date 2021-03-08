@@ -11,8 +11,9 @@ ln -sfv "$DOTFILES_DIR/system/.inputrc" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
 
 mkdir ~/Library/KeyBindings
+mkdir -p ~/.config/karabiner
 ln -sfv "$DOTFILES_DIR/system/DefaultKeyBindings.dict" ~/Library/KeyBindings
-
+ln -sfv "$DOTFILES_DIR/system/karabiner.json" ~/.config/karabiner/karabiner.json
 ln -sfv "$DOTFILES_DIR/bin" ~/bin
 
 # TODO: VS Code symbolic links
