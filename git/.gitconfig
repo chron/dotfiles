@@ -6,8 +6,7 @@
 	email = paul@storypark.com
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore_global
-  attributesfile = ~/.gitattributes
+	excludesfile = ~/dotfiles/git/.gitignore_global
 	autocrlf = false
 [push]
 	default = simple
@@ -21,7 +20,8 @@
 	autocorrect = 20
 [credential]
 	helper = osxkeychain
-[interactive]
-	diffFilter = diff-highlight
 [rebase]
 	autoStash = true
+[rerere]
+	enabled = true
+	autoUpdate = true

@@ -4,6 +4,8 @@ alias git-authors="git ls-tree -r -z --name-only HEAD -- . | xargs -0 -n1 git bl
 alias git-link="git symbolic-ref --short HEAD | xargs git push --set-upstream origin"
 alias git-branches="git for-each-ref --color --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' |tail -n 15"
 alias git-branch-files="git log master..head --name-only | grep '^[a-z]' | grep -v '^commit' | sort | uniq"
+alias git-nvm="git reset --soft HEAD~1"
+alias git-fix="git add -A && git commit --amend --no-edit"
 
 commits-last-day() {
   git log --oneline --all --since="24 hours ago" --author Paul | wc -l

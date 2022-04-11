@@ -1,3 +1,5 @@
 .DS_Store
 /node_modules
 ui_testing_scripts/alias.sh
+public/packs-test
+public/packs

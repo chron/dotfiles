@@ -61,4 +61,9 @@
     "command": "-copyFilePath",
     "when": "!editorFocus"
   },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  }
 ]
